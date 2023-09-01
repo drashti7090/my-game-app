@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/home_page.dart';
 
 import 'login.dart';
 
@@ -121,7 +122,9 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
                   name: "Continue",
                   textColor: Colors.white70,
                   backgroundColor: Color(0xff31939F),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
+                  },
                   minimumSize: Size(MediaQuery.of(context).size.width, 45),
                 ),
                 SizedBox(height: 20,),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:my_app/login.dart';
 import 'package:my_app/signup_with_email.dart';
 
+import 'home_page.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
@@ -24,7 +26,9 @@ class _SignUpState extends State<SignUp> {
               Align(
                 alignment: Alignment.topRight,
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
+                    },
                     icon: Icon(
                       Icons.close,
                       color: Color(0xffAAADBE),

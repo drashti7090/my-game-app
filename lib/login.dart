@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/home_page.dart';
 import 'package:my_app/signup_page.dart';
 
 class Login extends StatefulWidget {
@@ -31,7 +32,7 @@ class _LoginState extends State<Login> {
                     alignment: Alignment.topRight,
                     child: IconButton(
                         onPressed: () {
-
+Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
                         },
                         icon: Icon(
                           Icons.close,
@@ -131,7 +132,9 @@ class _LoginState extends State<Login> {
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+
+                        },
                         child: Text(
                           "Forgot Password?",
                           style: TextStyle(color: Color(0xff31939F)),
@@ -139,7 +142,9 @@ class _LoginState extends State<Login> {
                   ),
                   buildElevatedButton(
                     name: "Log in",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
+                    },
                     textColor: Colors.white,
                     backgroundColor: Color(0xff31939F),
                     minimumSize: Size(MediaQuery.of(context).size.width, 45),
