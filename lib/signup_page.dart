@@ -16,7 +16,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff141520),
+      backgroundColor: const Color(0xff141520),
       body: SafeArea(
         child: Padding(
           padding:
@@ -27,56 +27,56 @@ class _SignUpState extends State<SignUp> {
                 alignment: Alignment.topRight,
                 child: IconButton(
                     onPressed: () {
-                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Home(),), (route) => false);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.close,
                       color: Color(0xffAAADBE),
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Text(
+              const Text(
                 " Sign up",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w500,
                     color: Color(0xffAAADBE)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               buildElevatedButton(
                   onPressed: () => () {},
-                  textColor: Color(0xff141520),
+                  textColor: const Color(0xff141520),
                   backgroundColor: Colors.white,
                   name: "Continue with Google"),
               buildElevatedButton(
                   onPressed: () => () {},
                   textColor: Colors.white,
-                  backgroundColor: Color(0xff1877F2),
+                  backgroundColor: const Color(0xff1877F2),
                   name: "Continue with Facebook"),
               buildElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignupWithEmail(),
+                      builder: (context) => const SignupWithEmail(),
                     ),
                   );
                 },
-                backgroundColor: Color(0xff31939F),
+                backgroundColor: const Color(0xff31939F),
                 textColor: Colors.white,
                 name: "Sign up with your email",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               RichText(
                 text: TextSpan(
                   text: "Already registered?  ",
-                  style: TextStyle(color: Colors.white70),
+                  style: const TextStyle(color: Colors.white70),
                   children: [
                     TextSpan(
                         recognizer: TapGestureRecognizer()
@@ -84,11 +84,11 @@ class _SignUpState extends State<SignUp> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Login(),
+                                  builder: (context) => const Login(),
                                 ));
                           },
                         text: "Log in",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Color(0xff31939F),
                             fontWeight: FontWeight.w500,
                             fontSize: 15))
@@ -112,7 +112,7 @@ class _SignUpState extends State<SignUp> {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(25),
             ),

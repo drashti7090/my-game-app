@@ -19,7 +19,7 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff141520),
+      backgroundColor: const Color(0xff141520),
       body: SafeArea(
         child: SafeArea(
           key: formKey,
@@ -32,22 +32,22 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
                   alignment: Alignment.topRight,
                   child: IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.close,
                         color: Color(0xffAAADBE),
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Text(
+                const Text(
                   " Sign up with email",
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w500,
                       color: Color(0xffAAADBE)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 buildTextFormField(
@@ -64,7 +64,7 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
                     }
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 buildTextFormField(
@@ -86,52 +86,52 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
                     }
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 RichText(
                   text: TextSpan(
                     text: "I accept the ",
-                    style: TextStyle(color: Colors.white70, fontSize: 12),
+                    style: const TextStyle(color: Colors.white70, fontSize: 12),
                     children: [
                       TextSpan(
                           recognizer: TapGestureRecognizer()..onTap = () {},
                           text: "Terms and Conditions",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xff31939F),
                               fontWeight: FontWeight.w500,
                               fontSize: 12)),
-                      TextSpan(
+                      const TextSpan(
                         text: " and ",
                         style: TextStyle(color: Colors.white70, fontSize: 12),
                       ),
                       TextSpan(
                           recognizer: TapGestureRecognizer()..onTap = () {},
                           text: "Privacy Policy",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xff31939F),
                               fontWeight: FontWeight.w500,
                               fontSize: 12)),
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 buildElevatedButton(
                   name: "Continue",
                   textColor: Colors.white70,
-                  backgroundColor: Color(0xff31939F),
+                  backgroundColor: const Color(0xff31939F),
                   onPressed: () {
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home(),), (route) => false);
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Home(),), (route) => false);
                   },
                   minimumSize: Size(MediaQuery.of(context).size.width, 45),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 RichText(
                   text: TextSpan(
                     text: "Already registered?  ",
-                    style: TextStyle(color: Colors.white70),
+                    style: const TextStyle(color: Colors.white70),
                     children: [
                       TextSpan(
                           recognizer: TapGestureRecognizer()
@@ -139,11 +139,11 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Login(),
+                                    builder: (context) => const Login(),
                                   ));
                             },
                           text: "Log in",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xff31939F),
                               fontWeight: FontWeight.w500,
                               fontSize: 15))
@@ -169,19 +169,19 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
       controller: controller,
       obscureText: obscureText ?? false,
       keyboardType: keyboardType,
-      style: TextStyle(
+      style: const TextStyle(
           color: Colors.white, fontWeight: FontWeight.w400, fontSize: 14),
       decoration: InputDecoration(
           fillColor: Colors.white12,
           filled: true,
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xff246C76)),
               borderRadius: BorderRadius.all(Radius.circular(10))),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
           hintText: hintText,
-          contentPadding: EdgeInsets.only(
+          contentPadding: const EdgeInsets.only(
             left: 20,
           ),
           hintStyle: TextStyle(
@@ -202,7 +202,7 @@ class _SignupWithEmailState extends State<SignupWithEmail> {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(25),
             ),

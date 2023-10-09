@@ -4,7 +4,7 @@ import 'package:my_app/splash_screen.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "my app",
        home: SplashScreen(),

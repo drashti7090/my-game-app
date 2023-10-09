@@ -13,7 +13,7 @@ class _HomePersonState extends State<HomePerson> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff141520),
+      backgroundColor: const Color(0xff141520),
       body: SafeArea(
         child: Stack(
           children: [
@@ -32,51 +32,51 @@ class _HomePersonState extends State<HomePerson> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.close,
                         color: Color(0xffAAADBE),
                       )),
                 ),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   "Create your Play Poratal\n account for free!",
                   style: TextStyle(color: Colors.white70, fontSize: 23,fontWeight: FontWeight.w600),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Login(),));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(),));
                       },
-                      child: Text("Log in",
-                          style: TextStyle(color: Color(0xff246C76), fontSize: 17),),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white70,
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             top: 10, bottom: 10, left: 15, right: 15),
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(25),
                           ),
                         ),
                       ),
+                      child: const Text("Log in",
+                          style: TextStyle(color: Color(0xff246C76), fontSize: 17),),
                     ),
-                    SizedBox(width: 30,),
+                    const SizedBox(width: 30,),
                     OutlinedButton(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp(),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUp(),));
 
-                    }, child:Text("Sign up",
-                      style: TextStyle(color: Colors.white70, fontSize: 17),),
+                    },
                     style: OutlinedButton.styleFrom( foregroundColor: Colors.white70,
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           top: 10, bottom: 10, left: 15, right: 15),
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(25),
                         ),
-                      ),),),
-                    SizedBox(width: 40,)
+                      ),), child:const Text("Sign up",
+                      style: TextStyle(color: Colors.white70, fontSize: 17),),),
+                    const SizedBox(width: 40,)
                   ],
                 )
               ]),
